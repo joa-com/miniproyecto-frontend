@@ -17,14 +17,16 @@ export function obtenerTareas() {
  * @returns {Object}
  */
 export function agregarTarea(texto) {
+    const textoLimpio = texto.trim();
+    if (textoLimpio === "") {
+        return null;
+    }
     const nuevaTarea = {
         id: Date.now(),
-        texto: texto.trim(),
+        texto: textoLimpio,
         completada: false
     };
-
-    tareas.push(nuevaTarea);
-
+    tareas.push(nuevaTarea)
     return nuevaTarea;
 }
 
