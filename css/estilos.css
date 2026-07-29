@@ -1,0 +1,169 @@
+/* ---------- Configuración general ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f4f7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    padding: 30px;
+}
+
+/* ---------- Encabezado ---------- */
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.encabezado h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.encabezado p {
+    color: #666;
+}
+
+/* ---------- Contenedor ---------- */
+
+.contenedor {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ---------- Tarjetas ---------- */
+
+.seccion-formulario,
+.seccion-tareas {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    margin-bottom: 25px;
+}
+
+/* ---------- Formulario ---------- */
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.grupo-formulario input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.grupo-formulario input:focus {
+    outline: none;
+    border-color: #4a6cf7;
+}
+
+/* ---------- Botones ---------- */
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 15px;
+    transition: .25s;
+}
+
+#boton-agregar {
+    background-color: #4a6cf7;
+    color: white;
+}
+
+#boton-agregar:hover {
+    background-color: #3556d8;
+}
+
+/* ---------- Encabezado de tareas ---------- */
+
+.encabezado-tareas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.encabezado-tareas p {
+    font-weight: bold;
+}
+
+/* ---------- Filtros ---------- */
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.boton-filtro {
+    background-color: #e6e6e6;
+}
+
+.boton-filtro:hover {
+    background-color: #d5d5d5;
+}
+
+.boton-filtro.activo {
+    background-color: #4a6cf7;
+    color: white;
+}
+
+/* ---------- Lista ---------- */
+
+.lista-tareas {
+    list-style: none;
+}
+
+.mensaje-lista-vacia {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+}
+
+.mensaje-error {
+    margin-top: 10px;
+    color: crimson;
+    font-size: 14px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .encabezado-tareas {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    .boton-filtro {
+        width: 100%;
+    }
+
+}
