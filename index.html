@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Listado de tareas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1>Lista de tareas</h1>
+
+        <p>
+            Organiza tus tareas pendientes de manera sencilla.
+        </p>
+    </header>
+
+    <main class="contenedor">
+        <section class="seccion-formulario">
+            <h2>Agregar una tarea</h2>
+
+            <form id="formulario-tarea">
+                <div class="grupo-formulario">
+                    <label for="texto-tarea">
+                        Descripción de la tarea
+                    </label>
+
+                    <input
+                        type="text"
+                        id="texto-tarea"
+                        name="texto-tarea"
+                        placeholder="Ejemplo: Terminar el práctico"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <button type="submit" id="boton-agregar">
+                    Agregar tarea
+                </button>
+
+                <p
+                    id="mensaje-error"
+                    class="mensaje-error"
+                    aria-live="polite"
+                ></p>
+            </form>
+        </section>
+
+        <section class="seccion-tareas">
+            <div class="encabezado-tareas">
+                <h2>Mis tareas</h2>
+
+                <p>
+                    Pendientes:
+                    <span id="contador-pendientes">0</span>
+                </p>
+            </div>
+
+            <div class="filtros" aria-label="Filtros de tareas">
+                <button
+                    type="button"
+                    class="boton-filtro activo"
+                    data-filtro="todas"
+                >
+                    Todas
+                </button>
+
+                <button
+                    type="button"
+                    class="boton-filtro"
+                    data-filtro="pendientes"
+                >
+                    Pendientes
+                </button>
+
+                <button
+                    type="button"
+                    class="boton-filtro"
+                    data-filtro="completadas"
+                >
+                    Completadas
+                </button>
+            </div>
+
+            <ul id="lista-tareas" class="lista-tareas">
+                <!-- Las tareas serán creadas desde JavaScript -->
+            </ul>
+
+            <p id="mensaje-lista-vacia" class="mensaje-lista-vacia">
+                Todavía no hay tareas registradas.
+            </p>
+        </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
