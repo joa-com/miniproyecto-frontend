@@ -144,6 +144,24 @@ button {
     font-size: 14px;
 }
 
+/* ---------- Tareas ---------- */
+
+.tarea {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 14px;
+    margin-bottom: 10px;
+    background-color: #f4f6ff;
+    border-left: 4px solid #4a6cf7;
+    border-radius: 8px;
+}
+
+.tarea p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 600px) {
